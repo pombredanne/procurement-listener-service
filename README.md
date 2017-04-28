@@ -17,6 +17,7 @@ This section outlines the steps needed to get started with this code.
 
 - [Install and Setup Go (Prerequisite)](#install-and-setup-go)
 - [Clone the Git Repository](#clone-the-git-repository)
+- [Download Dependencies](#download-dependencies)
 - [Build the Service](#build-the-service)
 - [Run the Listener Service Locally](#run-the-listener-service-locally)
 - [Run Conformance Tests](#run-conformance-tests)
@@ -43,24 +44,32 @@ docs](https://golang.org/doc/code.html#GOPATH)).
 
 ```shell
 cd $GOPATH/src
-git clone https://github.com/google/procurement-listener-service.git
+git clone https://github.com/google/procurement-listener-service.git procurementlistenerservice
+```
+
+### Download Dependencies
+
+```shell
+cd $GOPATH/src/procurementlistenerservice
+go get
 ```
 
 ### Build the Service
 
 ```shell
-go build procurement-listener-service
+cd $GOPATH/src/procurementlistenerservice
+go build
 ```
 
 ### Run the Listener Service Locally
 ```shell
-cd $GOPATH/src/procurement-listener-service
+cd $GOPATH/src/procurementlistenerservice
 . scripts/runlocal.sh
 ```
 
 ### Run Conformance Tests
 ```shell
-cd $GOPATH/src/procurement-listener-service/conformance
+cd $GOPATH/src/procurementlistenerservice/conformance
 go test
 ```
 
